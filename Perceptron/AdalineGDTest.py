@@ -92,7 +92,7 @@ if __name__=="__main__":
     # Train Adaline 2
     # =====================================================
     # Starting with Adaline
-    agd3 = AdalineGD(eta=0.01, n_iter=100)
+    agd3 = AdalineGD(eta=0.001, n_iter=100)
 
     X_std=np.copy(X)                                                # **Standarization using
     X_std[:,0]=(X[:,0] - X[:,0].mean())/ X[:,0].std()               #  means and std deviation

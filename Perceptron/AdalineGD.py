@@ -1,3 +1,5 @@
+
+#adaline using batch gradient descent
 import numpy as np
 
 class AdalineGD(object):
@@ -18,7 +20,7 @@ class AdalineGD(object):
     error_ : list
         Number of misclassfication(updates) in each epoch.
     """
-    def __init__(self,eta=0.01,n_iter=50,random_state=1):
+    def __init__(self,eta=0.01,n_iter=10,random_state=1):
         self.eta=eta
         self.n_iter=n_iter
         self.random_state=random_state
@@ -38,15 +40,19 @@ class AdalineGD(object):
         rgen=np.random.RandomState(self.random_state)
         self.w_ = rgen.normal(loc=0.0,scale=0.01,size=1+X.shape[1])
         self.cost_ = []
-
+        # adaptive learning rate
+        alr=self.eta             # for normal replace with eta fixed learning rate
         for _ in range(self.n_iter):
             net_input=self.net_input(X)
             output = self.activation(net_input)
             errors=(y-output)
-            self.w_[1:]+=self.eta*X.T.dot(errors)
-            self.w_[0]+=self.eta*errors.sum()
+            #self.w_[1:]+=alr*X.T.dot(errors)               Adaptive Learning rule
+            self.w_[1:] += self.eta * X.T.dot(errors)
+            #self.w_[0]+=alr*errors.sum()                   Adaptive Learning rule
+            self.w_[0] += self.eta * errors.sum()
             cost=(errors**2).sum()/2.0
             self.cost_.append(cost)
+            #alr=1/(self.n_iter+0.5)                        Adaptive Learning rule
         return self
 
     def net_input(self,X):
