@@ -67,7 +67,7 @@ def plot_decision_regions(X, y, classifier, test_idx=None,resolution=0.02):
 
 from sklearn.linear_model import LogisticRegression
 #lr=LogisticRegression()
-lr=LogisticRegression(C=100.0,random_state=1)
+lr=LogisticRegression(C=100.0,random_state=2)
 lr.fit(X_train_std,y_train)
 
 X_combined_std=np.vstack((X_train_std,X_test_std))

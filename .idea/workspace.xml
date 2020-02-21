@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69d7c654-c8f2-44d6-9578-95dbe328f815" name="Default Changelist" comment="">
+    <list default="true" id="aeadaa5d-9575-4047-9d5b-045e7a879458" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelperFunctions/Plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelperFunctions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scikit-Learn/SVM_on_Linearly_inseparable_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MachineLearning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogisticRegression/LogisticRegressionGD.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogisticRegression/LogisticRegressionGD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scikit-Learn/LogisticRegression_Iris.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scikit-Learn/LogisticRegression_Iris.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scikit-Learn/SupportvectorMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scikit-Learn/SupportvectorMachine.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,72 +29,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Xxwjxk6A8r3URkEbkZplf0LLbI" />
+  <component name="ProjectId" id="1Y7ccTMoidzacxKW4yDvnnfd0Yo" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.LogisticRegression_Iris">
-    <configuration name="AdalineGDTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MachineLearning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Perceptron" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Perceptron/AdalineGDTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LogisticRegressionGD_Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MachineLearning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LogisticRegression" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LogisticRegression/LogisticRegressionGD_Test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LogisticRegression_Iris" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MachineLearning" />
+  <component name="RunManager" selected="Python.SVM_on_Linearly_inseparable_data">
+    <configuration name="LogisticRegression_Iris" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Machine-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -105,29 +65,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MachineLearning" type="PythonConfigurationType" factoryName="Python">
-      <module name="MachineLearning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\PycharmProjects\MachineLearning\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Scripts" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Perceptron_Iris" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MachineLearning" />
+    <configuration name="SVM_on_Linearly_inseparable_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Machine-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -138,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scikit-Learn/Perceptron_Iris.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scikit-Learn/SVM_on_Linearly_inseparable_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,19 +86,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.MachineLearning" />
-      <item itemvalue="Python.AdalineGDTest" />
-      <item itemvalue="Python.Perceptron_Iris" />
-      <item itemvalue="Python.LogisticRegressionGD_Test" />
-      <item itemvalue="Python.LogisticRegression_Iris" />
-    </list>
+    <configuration name="SupportvectorMachine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Machine-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scikit-Learn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scikit-Learn/SupportvectorMachine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SVM_on_Linearly_inseparable_data" />
         <item itemvalue="Python.LogisticRegression_Iris" />
-        <item itemvalue="Python.LogisticRegressionGD_Test" />
-        <item itemvalue="Python.Perceptron_Iris" />
-        <item itemvalue="Python.AdalineGDTest" />
+        <item itemvalue="Python.SupportvectorMachine" />
       </list>
     </recent_temporary>
   </component>
@@ -168,25 +117,61 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="69d7c654-c8f2-44d6-9578-95dbe328f815" name="Default Changelist" comment="" />
-      <created>1582001192935</created>
+      <changelist id="aeadaa5d-9575-4047-9d5b-045e7a879458" name="Default Changelist" comment="" />
+      <created>1582297153619</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582001192935</updated>
+      <updated>1582297153619</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="718" y="256" width="530" height="598" key="FileChooserDialogImpl" timestamp="1582297323230">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="718" y="256" width="530" height="598" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1582297323230" />
+    <state width="1825" height="263" key="GridCell.Tab.0.bottom" timestamp="1582305788647">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1825" height="263" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1582305788647" />
+    <state width="1825" height="263" key="GridCell.Tab.0.center" timestamp="1582305788646">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1825" height="263" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1582305788646" />
+    <state width="1825" height="263" key="GridCell.Tab.0.left" timestamp="1582305788645">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1825" height="263" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1582305788645" />
+    <state width="1825" height="263" key="GridCell.Tab.0.right" timestamp="1582305788646">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state width="1825" height="263" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1582305788646" />
+    <state x="359" y="103" key="SettingsEditor" timestamp="1582297490795">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1582297490795" />
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582297159325">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582297159325" />
+    <state x="717" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582305784828">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="717" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.34.1853.1046@67.34.1853.1046" timestamp="1582305784828" />
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1582298608391">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.34.1853.1046@67.34.1853.1046" timestamp="1582298608391" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scikit-Learn/SVM_on_Linearly_inseparable_data.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
