@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeadaa5d-9575-4047-9d5b-045e7a879458" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelperFunctions/Plotting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelperFunctions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scikit-Learn/SVM_on_Linearly_inseparable_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MachineLearning.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/LogisticRegressionGD.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogisticRegression/LogisticRegressionGD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scikit-Learn/LogisticRegression_Iris.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scikit-Learn/LogisticRegression_Iris.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scikit-Learn/SupportvectorMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scikit-Learn/SupportvectorMachine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Python.SVM_on_Linearly_inseparable_data">
     <configuration name="LogisticRegression_Iris" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -90,6 +81,9 @@
       <module name="Machine-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scikit-Learn" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -146,14 +140,14 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state width="1825" height="263" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1582305788646" />
-    <state x="359" y="103" key="SettingsEditor" timestamp="1582297490795">
+    <state x="359" y="103" key="SettingsEditor" timestamp="1582306707504">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1582297490795" />
-    <state x="573" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582297159325">
+    <state x="359" y="103" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1582306707504" />
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1582306624036">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="573" y="345" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582297159325" />
+    <state x="573" y="345" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582306624036" />
     <state x="717" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582305784828">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
