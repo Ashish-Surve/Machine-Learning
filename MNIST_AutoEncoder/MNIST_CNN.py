@@ -6,9 +6,24 @@ Ran this code on Google Collab to obtain the model file in .h5 format
 
 https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d
 """
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.datasets import mnist
+
+#from __future__ import absolute_import, division, print_function, unicode_literals
+
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
+
+"""
+Numa Node warning can be handled by kludge 
+echo 0 | sudo tee -a /sys/bus/pci/devices/0000:01:00.0/numa_node
+000:01:00.0 is my PCI device id where GPU is connected.
+
+"""
+
 
 from tensorflow.keras.models import Model
 from tensorflow.keras.callbacks import TensorBoard
@@ -76,59 +91,59 @@ if __name__ == "__main__":
     ## uncomment below line if we need to make the model file again
     ################################################################
 
-    # print("[INFO] building autoencoder...")
-    # (encoder, decoder, autoencoder) = ConvAutoencoder.build(28, 28, 1)
-    # opt = Adam(lr=1e-3)
-    # autoencoder.compile(loss="mse", optimizer=opt)
-    # # train the convolutional autoencoder
-    # H = autoencoder.fit(
-    #     trainXNoisy, trainX,
-    #     validation_data=(testXNoisy, testX),
-    #     epochs=EPOCHS,
-    #     batch_size=BS)
-    # # construct a plot that plots and saves the training history
-    # N = np.arange(0, EPOCHS)
-    # plt.style.use("ggplot")
-    # plt.figure()
-    # plt.plot(N, H.history["loss"], label="train_loss")
-    # plt.plot(N, H.history["val_loss"], label="val_loss")
-    # plt.title("Training Loss and Accuracy")
-    # plt.xlabel("Epoch #")
-    # plt.ylabel("Loss/Accuracy")
-    # plt.legend(loc="lower left")
-    # plt.savefig(args["plot"])
-    #
-    # print("[INFO] making predictions...")
-    # decoded = autoencoder.predict(testXNoisy)
-    # outputs = None
-    # # loop over our number of output samples
-    # for i in range(0, args["samples"]):
-    #     # grab the original image and reconstructed image
-    #     original = (testXNoisy[i] * 255).astype("uint8")
-    #     recon = (decoded[i] * 255).astype("uint8")
-    #     # stack the original and reconstructed image side-by-side
-    #     output = np.hstack([original, recon])
-    #     # if the outputs array is empty, initialize it as the current
-    #     # side-by-side image display
-    #     if outputs is None:
-    #         outputs = output
-    #     # otherwise, vertically stack the outputs
-    #     else:
-    #         outputs = np.vstack([outputs, output])
-    # # save the outputs image to disk
-    # cv2.imwrite(args["output"], outputs)
-    #
-    # autoencoder.save('CNN_AutoencoderV3_for_denoise.h5')
+    print("[INFO] building autoencoder...")
+    (encoder, decoder, autoencoder) = ConvAutoencoder.build(28, 28, 1)
+    opt = Adam(lr=1e-3)
+    autoencoder.compile(loss="mse", optimizer=opt)
+    # train the convolutional autoencoder
+    H = autoencoder.fit(
+        trainXNoisy, trainX,
+        validation_data=(testXNoisy, testX),
+        epochs=EPOCHS,
+        batch_size=BS)
+    # construct a plot that plots and saves the training history
+    N = np.arange(0, EPOCHS)
+    plt.style.use("ggplot")
+    plt.figure()
+    plt.plot(N, H.history["loss"], label="train_loss")
+    plt.plot(N, H.history["val_loss"], label="val_loss")
+    plt.title("Training Loss and Accuracy")
+    plt.xlabel("Epoch #")
+    plt.ylabel("Loss/Accuracy")
+    plt.legend(loc="lower left")
+    plt.savefig(args["plot"])
 
-    learning_rate = 0.01
-    training_epochs = 25
+    print("[INFO] making predictions...")
+    decoded = autoencoder.predict(testXNoisy)
+    outputs = None
+    # loop over our number of output samples
+    for i in range(0, args["samples"]):
+        # grab the original image and reconstructed image
+        original = (testXNoisy[i] * 255).astype("uint8")
+        recon = (decoded[i] * 255).astype("uint8")
+        # stack the original and reconstructed image side-by-side
+        output = np.hstack([original, recon])
+        # if the outputs array is empty, initialize it as the current
+        # side-by-side image display
+        if outputs is None:
+            outputs = output
+        # otherwise, vertically stack the outputs
+        else:
+            outputs = np.vstack([outputs, output])
+    # save the outputs image to disk
+    cv2.imwrite(args["output"], outputs)
+
+    #autoencoder.save('CNN_AutoencoderV3_for_denoise.h5')
+
+    learning_rate = 0.001
+    training_epochs = 20
     batch_size = 100
-    adam = Adam(lr=0.01)
+    adam = Adam(lr=0.001)
 
     # Load Noise Model
-    from tensorflow.keras.models import load_model
+    ##from tensorflow.keras.models import load_model
 
-    autoencoder = load_model('CNN_AutoencoderV3_for_denoise.h5')
+    ##autoencoder = load_model('CNN_AutoencoderV3_for_denoise.h5')
     autoencoder_op = autoencoder.predict(x_train_noisy)
     autoencoder_op.shape = (autoencoder_op.shape[0], 784)
     print(autoencoder_op.shape)
@@ -167,4 +182,5 @@ if __name__ == "__main__":
     plt.legend(loc="lower left")
     plt.savefig("Dense_plot.png")
 
-    dense_model.save('DenseModelFINAL.h5')
+    #dense_model.save('DenseModelFINAL.h5')
+    print("Done")
