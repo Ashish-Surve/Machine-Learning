@@ -1,3 +1,25 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+
+# Load the TensorBoard notebook extension.
+
+
+#TENSORBOARD
+from time import time
+
+from tensorflow.python.keras.callbacks import TensorBoard
+from datetime import datetime
+from packaging import version
+
+import tensorflow as tf
+from tensorflow import keras
+
+print("TensorFlow version: ", tf.__version__)
+assert version.parse(tf.__version__).release[0] >= 2, \
+    "This notebook requires TensorFlow 2.0 or above."
+
 """
 This program classfies the digit in MNIST dataset using a CNN.
 Some noise is added to digits using gaussian distribution.
@@ -66,15 +88,15 @@ if __name__ == "__main__":
 
     args = {}
     args["samples"] = 8
-    args["output"] = "op.png"
+    args["output"] = "op_encoder.png"
     args["plot"] = "plot.png"
 
     # initialize the number of epochs to train for and batch size
-    EPOCHS = 10
-    BS = 32
+    EPOCHS = 15
+    BS = 2000
 
     # load the MNIST dataset
-    print("[INFO] loading MNIST dataset...")
+    print("load MNIST dataset...")
     # ((trainX, _), (testX, _)) = mnist.load_data()
     trainX, testX = x_train, x_test
 
@@ -86,21 +108,26 @@ if __name__ == "__main__":
     testXNoisy = np.clip(x_test_noisy, 0., 1.)
 
     print(trainX.shape)
+    # TENSORBOARD
+    logdir = "logs/{}".format(time())
+    # tensorboard_callback = keras.callbacks.TensorBoard(log_dir=logdir)
 
+    tensorboard=TensorBoard(log_dir=logdir)
     #################################################################
     ## uncomment below line if we need to make the model file again
     ################################################################
 
-    print("[INFO] building autoencoder...")
     (encoder, decoder, autoencoder) = ConvAutoencoder.build(28, 28, 1)
-    opt = Adam(lr=1e-3)
+    opt = Adam(lr=1e-3,beta_1=0.09,beta_2=0.099)
     autoencoder.compile(loss="mse", optimizer=opt)
     # train the convolutional autoencoder
+
     H = autoencoder.fit(
         trainXNoisy, trainX,
         validation_data=(testXNoisy, testX),
         epochs=EPOCHS,
-        batch_size=BS)
+        batch_size=BS,
+        callbacks=[tensorboard])
     # construct a plot that plots and saves the training history
     N = np.arange(0, EPOCHS)
     plt.style.use("ggplot")
@@ -111,9 +138,9 @@ if __name__ == "__main__":
     plt.xlabel("Epoch #")
     plt.ylabel("Loss/Accuracy")
     plt.legend(loc="lower left")
-    plt.savefig(args["plot"])
+    plt.savefig("output_encoder.png")
 
-    print("[INFO] making predictions...")
+    print("making predictions...")
     decoded = autoencoder.predict(testXNoisy)
     outputs = None
     # loop over our number of output samples
@@ -133,12 +160,12 @@ if __name__ == "__main__":
     # save the outputs image to disk
     cv2.imwrite(args["output"], outputs)
 
-    #autoencoder.save('CNN_AutoencoderV3_for_denoise.h5')
+    autoencoder.save('CNN_Autoencoder_for_denoise.h5')
 
-    learning_rate = 0.001
-    training_epochs = 20
-    batch_size = 100
-    adam = Adam(lr=0.001)
+    learning_rate = 0.0000001
+    training_epochs = 200
+    batch_size = 2000
+    adam = Adam(lr=learning_rate,beta_1=0.000001,beta_2=0.00000111)
 
     # Load Noise Model
     ##from tensorflow.keras.models import load_model
@@ -148,7 +175,7 @@ if __name__ == "__main__":
     autoencoder_op.shape = (autoencoder_op.shape[0], 784)
     print(autoencoder_op.shape)
     # Load Dense Model
-    import Tarsyer_MNIST_Ashish_Surve.Train_Digits_MNIST as TDM
+    import MNIST_AutoEncoder.Train_Digits_MNIST as TDM
 
     dense_model = TDM.ConvMNIST.build(784)
 
